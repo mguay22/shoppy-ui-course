@@ -1,4 +1,5 @@
-import { Button, Stack, TextField, Typography } from "@mui/material";
+import { Button, Link, Stack, TextField } from "@mui/material";
+import NextLink from "next/link";
 
 export default function Login() {
   return (
@@ -6,6 +7,9 @@ export default function Login() {
       <TextField label="Email" variant="outlined" />
       <TextField label="Password" variant="outlined" />
       <Button variant="contained">Login</Button>
+      <Link component={NextLink} href="/auth/signup" className="self-center">
+        Signup
+      </Link>
     </Stack>
   );
 }
